@@ -1,15 +1,29 @@
 use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Debug)]
+pub struct AbilityDetails {
+    pub name: String,
+    pub url: String,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct Ability {
+    pub ability: AbilityDetails,
+    pub is_hidden: bool,
+    pub slot: u32,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
 pub struct Pokemon {
-    base_experience: u32,
-    height: u32,
-    id: u32,
-    is_default: bool,
-    location_area_encounters: String,
-    name: String,
-    order: u32,
-    weight: u32,
+    pub abilities: Vec<Ability>,
+    pub base_experience: u32,
+    pub height: u32,
+    pub id: u32,
+    pub is_default: bool,
+    pub location_area_encounters: String,
+    pub name: String,
+    pub order: u32,
+    pub weight: u32,
 }
 
 #[cfg(test)]
