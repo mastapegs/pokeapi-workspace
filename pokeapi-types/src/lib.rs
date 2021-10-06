@@ -1,5 +1,14 @@
+use serde::{Serialize, Deserialize};
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct Pokemon {
+    name: String,
+}
+
 #[cfg(test)]
 mod tests {
+    use super::*;
+    
     #[test]
     fn it_works() {
         assert_eq!(2 + 2, 4);
@@ -11,7 +20,8 @@ mod tests {
             .await
             .unwrap();
         assert!(&response.status().is_success());
-        let json: serde_json::Value = response.json().await.unwrap();
-        assert_eq!(json["name"], "bulbasaur");
+        let json: Pokemon = response.json().await.unwrap();
+        assert_eq!(json.name, "bulbasaur");
+        println!("{:?}", json);
     }
 }
