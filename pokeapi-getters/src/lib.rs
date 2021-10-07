@@ -12,8 +12,9 @@ pub async fn get_pokemon(id: u32) -> Pokemon {
 #[cfg(test)]
 mod tests {
     use super::*;
+
     #[tokio::test]
-    async fn test_get_pokemon() {
+    async fn should_get_correct_pokemon() {
         assert_eq!(get_pokemon(1).await.name, "bulbasaur");
         assert_eq!(get_pokemon(2).await.name, "ivysaur");
         assert_eq!(get_pokemon(3).await.name, "venusaur");
