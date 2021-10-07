@@ -1,7 +1,9 @@
 [package]
-name = "pokeapi-types"
+name = "pokeapi_types"
 version = "0.1.0"
 edition = "2018"
+description = "a collection of structs used to aid in the creation of data from the PokeAPI service"
+license = "MIT"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
