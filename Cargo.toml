@@ -1,5 +1,6 @@
 [workspace]
 
 members = [
-  "pokeapi-types"
+  "pokeapi-types",
+  "pokeapi-getters"
 ]

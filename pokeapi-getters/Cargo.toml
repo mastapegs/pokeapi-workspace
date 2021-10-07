@@ -1,0 +1,11 @@
+[package]
+name = "pokeapi-getters"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+pokeapi-types = { path = "../pokeapi-types" }
+tokio = { version = "1.12.0", features = ["full"] }
+reqwest = { version = "0.11.4", features = ["json"] }
