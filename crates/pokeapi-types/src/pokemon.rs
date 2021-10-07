@@ -69,6 +69,20 @@ pub struct PokemonAbility {
     pub slot: u32,
 }
 
+/// This is the JSON struct for the endpoint /pokemon/{id}
+///
+/// # Examples
+///
+/// ```
+/// use pokeapi_types::Pokemon;
+///
+/// async fn getBulbasaur() {
+///     let response = reqwest::get("https://pokeapi.co/api/v2/pokemon/1/")
+///         .await
+///         .unwrap();
+///     let bulbasaur: Pokemon = response.json().await.unwrap();
+/// }
+/// ```
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Pokemon {
     pub abilities: Vec<PokemonAbility>,
