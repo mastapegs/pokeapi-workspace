@@ -1,6 +1,3 @@
 [workspace]
 
-members = [
-  "pokeapi-types",
-  "pokeapi-getters"
-]
+members = ["crates/*"]
