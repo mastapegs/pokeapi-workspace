@@ -1,21 +1,21 @@
 use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Debug)]
-pub struct AbilityDetails {
+pub struct NamedAPIResource {
     pub name: String,
     pub url: String,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
-pub struct Ability {
-    pub ability: AbilityDetails,
+pub struct PokemonAbility {
+    pub ability: NamedAPIResource,
     pub is_hidden: bool,
     pub slot: u32,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Pokemon {
-    pub abilities: Vec<Ability>,
+    pub abilities: Vec<PokemonAbility>,
     pub base_experience: u32,
     pub height: u32,
     pub id: u32,
