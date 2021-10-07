@@ -1,11 +1,14 @@
 [package]
-name = "pokeapi-getters"
+name = "pokeapi_getters"
 version = "0.1.0"
 edition = "2018"
+description = "a collection of async getter functions that assist in the retrieval of data from the PokeAPI"
+license = "MIT"
+repository = "https://github.com/mastapegs/pokeapi-workspace/"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-pokeapi-types = { path = "../pokeapi-types" }
+pokeapi_types = { path = "../pokeapi-types" }
 tokio = { version = "1.12.0", features = ["full"] }
 reqwest = { version = "0.11.4", features = ["json"] }
