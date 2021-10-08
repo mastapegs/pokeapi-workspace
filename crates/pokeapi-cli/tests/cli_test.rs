@@ -6,30 +6,30 @@ mod tests {
 
     #[test]
     fn cli_should_return_bulbasaur() {
-        let mut cmd = Command::cargo_bin("pokeapi-cli").unwrap();
+        let mut cli = Command::cargo_bin("pokeapi-cli").unwrap();
 
-        cmd.arg("1");
-        cmd.assert()
+        cli.arg("1");
+        cli.assert()
             .success()
             .stdout(predicate::str::contains("bulbasaur"));
     }
 
     #[test]
     fn cli_should_return_ivysaur() {
-        let mut cmd = Command::cargo_bin("pokeapi-cli").unwrap();
+        let mut cli = Command::cargo_bin("pokeapi-cli").unwrap();
 
-        cmd.arg("2");
-        cmd.assert()
+        cli.arg("2");
+        cli.assert()
             .success()
             .stdout(predicate::str::contains("ivysaur"));
     }
 
     #[test]
     fn cli_should_return_venusaur() {
-        let mut cmd = Command::cargo_bin("pokeapi-cli").unwrap();
+        let mut cli = Command::cargo_bin("pokeapi-cli").unwrap();
 
-        cmd.arg("3");
-        cmd.assert()
+        cli.arg("3");
+        cli.assert()
             .success()
             .stdout(predicate::str::contains("venusaur"));
     }
