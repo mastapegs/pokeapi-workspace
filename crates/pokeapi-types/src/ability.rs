@@ -41,6 +41,19 @@ pub struct AbilityPokemon {
 }
 
 /// This is the JSON struct for the endpoint /ability/{id}
+///
+/// # Examples
+///
+/// ```
+/// use pokeapi_types::Ability;
+///
+/// async fn get_poison_heal() {
+///     let response = reqwest::get("https://pokeapi.co/api/v2/ability/90/")
+///         .await
+///         .unwrap();
+///     let poison_heal: Ability = response.json().await.unwrap();
+/// }
+/// ```
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Ability {
     pub generation: NamedAPIResource,
