@@ -504,21 +504,11 @@ checksum = "7c9b1041b4387893b91ee6746cddfc28516aff326a3519fb2adf820932c5e6cb"
 
 [[package]]
 name = "pokeapi_getters"
-version = "0.1.0"
+version = "0.2.0"
 dependencies = [
- "pokeapi_types 0.1.0",
+ "pokeapi_types 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "reqwest",
  "tokio",
-]
-
-[[package]]
-name = "pokeapi_types"
-version = "0.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0c97e34bae32c9bc49792810cade40179a18a1789fc691ba5421869e51307b00"
-dependencies = [
- "serde",
- "serde_json",
 ]
 
 [[package]]
@@ -529,6 +519,16 @@ dependencies = [
  "serde",
  "serde_json",
  "tokio",
+]
+
+[[package]]
+name = "pokeapi_types"
+version = "0.1.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "178a27b4cda17cfbd7dfee8c93127cc51d05f6e7ac2a3cceaa0d943391ec2e3c"
+dependencies = [
+ "serde",
+ "serde_json",
 ]
 
 [[package]]
