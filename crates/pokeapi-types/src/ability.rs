@@ -3,6 +3,8 @@ use serde::{Deserialize, Serialize};
 /// This is the JSON struct for the endpoint /ability/{id}
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Ability {
+    id: u32,
+    is_main_series: bool,
     name: String,
 }
 

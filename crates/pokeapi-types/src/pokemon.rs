@@ -1,3 +1,4 @@
+use crate::NamedAPIResource;
 use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -54,12 +55,6 @@ pub struct PokemonHeldItem {
 pub struct VersionGameIndex {
     pub game_index: u32,
     pub version: NamedAPIResource,
-}
-
-#[derive(Serialize, Deserialize, Debug)]
-pub struct NamedAPIResource {
-    pub name: String,
-    pub url: String,
 }
 
 #[derive(Serialize, Deserialize, Debug)]

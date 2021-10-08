@@ -8,3 +8,6 @@ pub use pokemon::*;
 
 mod ability;
 pub use ability::*;
+
+mod common;
+pub use common::*;
