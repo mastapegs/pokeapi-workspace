@@ -5,4 +5,4 @@
 
 mod pokemon;
 
-pub use pokemon::Pokemon;
+pub use pokemon::*;
