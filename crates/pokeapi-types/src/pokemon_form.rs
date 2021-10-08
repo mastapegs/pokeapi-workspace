@@ -1,4 +1,4 @@
-use crate::NamedAPIResource;
+use crate::{Name, NamedAPIResource};
 use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -19,9 +19,11 @@ pub struct PokemonForm {
     pub is_default: bool,
     pub is_mega: bool,
     pub name: String,
+    pub names: Vec<Name>,
     pub order: usize,
     pub pokemon: NamedAPIResource,
     pub sprites: PokemonFormSprites,
+    pub version_group: NamedAPIResource,
 }
 
 #[cfg(test)]

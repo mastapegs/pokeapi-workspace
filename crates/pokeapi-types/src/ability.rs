@@ -1,4 +1,4 @@
-use crate::NamedAPIResource;
+use crate::{Name, NamedAPIResource};
 use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -18,12 +18,6 @@ pub struct VerboseEffect {
     pub effect: String,
     pub language: NamedAPIResource,
     pub short_effect: String,
-}
-
-#[derive(Serialize, Deserialize, Debug)]
-pub struct Name {
-    pub name: String,
-    pub language: NamedAPIResource,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
