@@ -10,9 +10,23 @@ pub struct PokemonFormSprites {
 }
 
 /// This is the JSON struct for the endpoint /pokemon-form/{id}
+///
+/// # Examples
+///
+/// ```
+/// use pokeapi_types::PokemonForm;
+///
+/// async fn get_mewtwo_forms() {
+///     let response = reqwest::get("https://pokeapi.co/api/v2/pokemon-form/150/")
+///         .await
+///         .unwrap();
+///     let mewtwo: PokemonForm = response.json().await.unwrap();
+/// }
+/// ```
 #[derive(Serialize, Deserialize, Debug)]
 pub struct PokemonForm {
     pub form_name: String,
+    pub form_names: Vec<Name>,
     pub form_order: usize,
     pub id: usize,
     pub is_battle_only: bool,
