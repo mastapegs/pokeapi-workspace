@@ -505,10 +505,25 @@ checksum = "7c9b1041b4387893b91ee6746cddfc28516aff326a3519fb2adf820932c5e6cb"
 [[package]]
 name = "pokeapi-cli"
 version = "0.1.0"
+dependencies = [
+ "pokeapi_getters 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "tokio",
+]
 
 [[package]]
 name = "pokeapi_getters"
 version = "0.2.0"
+dependencies = [
+ "pokeapi_types 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "reqwest",
+ "tokio",
+]
+
+[[package]]
+name = "pokeapi_getters"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "43d8459cefdd9c8dbbba83bafd7463f8da26fa817041f2d96c862c40cca26ad9"
 dependencies = [
  "pokeapi_types 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "reqwest",
