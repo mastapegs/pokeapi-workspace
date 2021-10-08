@@ -1,6 +1,6 @@
 [package]
 name = "pokeapi_getters"
-version = "0.2.0"
+version = "0.2.1"
 edition = "2018"
 description = "a collection of async getter functions that assist in the retrieval of data from the PokeAPI"
 license = "MIT"
