@@ -1,3 +1,4 @@
+use crate::NamedAPIResource;
 use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -57,12 +58,6 @@ pub struct VersionGameIndex {
 }
 
 #[derive(Serialize, Deserialize, Debug)]
-pub struct NamedAPIResource {
-    pub name: String,
-    pub url: String,
-}
-
-#[derive(Serialize, Deserialize, Debug)]
 pub struct PokemonAbility {
     pub ability: NamedAPIResource,
     pub is_hidden: bool,
@@ -114,8 +109,7 @@ mod tests {
             .await
             .unwrap();
         assert!(&response.status().is_success());
-        let json: Pokemon = response.json().await.unwrap();
-        assert_eq!(json.name, "bulbasaur");
-        println!("{:#?}", json);
+        let pokemon: Pokemon = response.json().await.unwrap();
+        assert_eq!(pokemon.name, "bulbasaur");
     }
 }

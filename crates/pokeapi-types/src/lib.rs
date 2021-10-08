@@ -4,5 +4,10 @@
 //! data from the [PokeAPI](https://pokeapi.co/) service.
 
 mod pokemon;
-
 pub use pokemon::*;
+
+mod ability;
+pub use ability::*;
+
+mod common;
+pub use common::*;
