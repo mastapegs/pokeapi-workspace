@@ -12,5 +12,8 @@ pub use ability::*;
 mod pokemon_form;
 pub use pokemon_form::*;
 
+mod version;
+pub use version::*;
+
 mod common;
 pub use common::*;
