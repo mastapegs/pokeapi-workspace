@@ -1,6 +1,6 @@
 [package]
 name = "pokeapi_types"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2018"
 description = "a collection of structs used to aid in the creation of data from the PokeAPI service"
 license = "MIT"

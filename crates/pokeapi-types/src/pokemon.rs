@@ -109,8 +109,7 @@ mod tests {
             .await
             .unwrap();
         assert!(&response.status().is_success());
-        let json: Pokemon = response.json().await.unwrap();
-        assert_eq!(json.name, "bulbasaur");
-        println!("{:#?}", json);
+        let pokemon: Pokemon = response.json().await.unwrap();
+        assert_eq!(pokemon.name, "bulbasaur");
     }
 }
