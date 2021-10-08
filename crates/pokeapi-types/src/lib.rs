@@ -12,6 +12,9 @@ pub use ability::*;
 mod pokemon_form;
 pub use pokemon_form::*;
 
+mod item;
+pub use item::*;
+
 mod version;
 pub use version::*;
 
