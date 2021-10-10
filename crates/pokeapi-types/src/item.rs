@@ -17,6 +17,11 @@ use serde::{Deserialize, Serialize};
 /// ```
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Item {
+    pub attributes: Vec<NamedAPIResource>,
+    pub cost: usize,
+    // pub fling_effect: NamedAPIResource,
+    // pub fling_power: usize,
+    pub id: usize,
     pub name: String,
 }
 
@@ -25,7 +30,7 @@ mod tests {
     use super::*;
 
     #[tokio::test]
-    async fn should_serialize_to_ability() {
+    async fn should_deserialize_to_item_struct() {
         let response = reqwest::get("https://pokeapi.co/api/v2/item/1/")
             .await
             .unwrap();
